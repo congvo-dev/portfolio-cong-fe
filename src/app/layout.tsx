@@ -3,7 +3,6 @@ import "./globals.css";
 import "animate.css";
 import BgParticle from "./components/BgParticle";
 import Template from "./template/Template";
-import BackgroundWork from "./components/BackgroundWork/BackgroundWork";
 import { StoreProvider } from "./store/StoreProvider";
 
 export const metadata: Metadata = {
@@ -20,7 +19,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <StoreProvider>
-          {/* <BackgroundWork /> */}
           <Template>{children}</Template>
           <BgParticle />
         </StoreProvider>
