@@ -5,9 +5,11 @@ export default function Certifications() {
   return (
     <div className="text-gray-400">
       <div>
-        <h1>Professional Front end Developer - Cybersoft Academy</h1>
+        <h1 className="text-xl">
+          Professional Front end Developer - Cybersoft Academy
+        </h1>
         <h1>
-          Date: 18/09/2023 -
+          Date: 18/09/2023 -{" "}
           <span>
             {<FaLink className="inline" />}{" "}
             <a href="" className="underline ">

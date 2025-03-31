@@ -1,16 +1,6 @@
 import React, { useState } from "react";
-import { FaGitAlt, FaReact } from "react-icons/fa";
-import {
-  SiBootstrap,
-  SiGithub,
-  SiJavascript,
-  SiRedux,
-  SiTailwindcss,
-  SiTypescript,
-} from "react-icons/si";
-import Transition from "@/app/components/Transition";
 import RightContent from "./RightContent/RightContent";
-import "./AboutMe.css";
+
 const navItemArr = [
   {
     id: "Skills",
@@ -42,7 +32,6 @@ export default function AboutMe() {
     });
   };
   return (
-    // <Transition>
     <div className="text-white grid grid-cols-2 animate__animated animate__fadeInDown">
       {/* left content */}
       <div className="space-y-5">
@@ -86,6 +75,5 @@ export default function AboutMe() {
         </div>
       </div>
     </div>
-    // </Transition>
   );
 }

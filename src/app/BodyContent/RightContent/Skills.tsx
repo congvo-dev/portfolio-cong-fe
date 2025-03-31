@@ -14,7 +14,7 @@ export default function Skills() {
     <div className="space-y-5">
       <div>
         <h1 className="text-2xl mb-5 text-gray-400">Front-End Development</h1>
-        <div className="flex text-5xl gap-5">
+        <div className="flex text-4xl gap-5">
           <FaReact />
           <SiRedux />
           <SiTypescript />
@@ -25,7 +25,7 @@ export default function Skills() {
       </div>
       <div>
         <h1 className="text-2xl mb-5 text-gray-400">Tools</h1>
-        <div className="flex text-5xl gap-3">
+        <div className="flex text-4xl gap-3">
           <SiGithub />
           <FaGitAlt />
         </div>
