@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import "animate.css";
+import "./styles/NavMenu.css";
 import BgParticle from "./components/BgParticle";
 import Template from "./template/Template";
 import { StoreProvider } from "./store/StoreProvider";

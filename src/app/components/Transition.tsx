@@ -1,41 +1,56 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 
+const transitionVariants = {
+  initial: {
+    x: "100%",
+    width: "100%",
+  },
+  animate: {
+    x: "0%",
+    witdh: "0%",
+  },
+  exit: {
+    x: ["0%", "100%"],
+    width: ["0%", "100%"],
+  },
+};
+
+const animateUp = {
+  initial: {
+    y: 0,
+  },
+  animate: {
+    y: "-100%",
+  },
+  exit: {
+    y: 0,
+  },
+  transition: {
+    duration: 1,
+    delay: 0.5,
+    ease: [0.76, 0, 0.24, 1],
+  },
+};
+
+const animateDown = {
+  initial: {
+    y: 0,
+  },
+  animate: {
+    y: "100%",
+  },
+  exit: {
+    y: 0,
+  },
+  transition: {
+    duration: 1,
+    delay: 0.5,
+    ease: [0.76, 0, 0.24, 1],
+  },
+};
+
 const Transition = ({ children }: { children: React.ReactNode }) => {
-  const animateUp = {
-    initial: {
-      y: 0,
-    },
-    animate: {
-      y: "-100%",
-    },
-    exit: {
-      y: 0,
-    },
-    transition: {
-      duration: 1,
-      delay: 0.5,
-      ease: [0.76, 0, 0.24, 1],
-    },
-  };
-
-  const animateDown = {
-    initial: {
-      y: 0,
-    },
-    animate: {
-      y: "100%",
-    },
-    exit: {
-      y: 0,
-    },
-    transition: {
-      duration: 1,
-      delay: 0.5,
-      ease: [0.76, 0, 0.24, 1],
-    },
-  };
-
   return (
     <>
       <AnimatePresence mode="wait">

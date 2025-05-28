@@ -1,9 +1,10 @@
 "use client";
 import React, { JSX } from "react";
 import { useAppSelector } from "@/app/store/hooks";
-import Hi from "./Hi";
-import AboutMe from "./AboutMe";
-import MyProjects from "./MyProjects";
+import Hi from "./Hi/Hi";
+import AboutMe from "./AboutMe/AboutMe";
+import MyProjects from "./Projects/MyProjects";
+import { div } from "framer-motion/client";
 
 const components: Record<string, JSX.Element> = {
   Hi: <Hi />,
@@ -20,6 +21,10 @@ export default function BodyContent() {
   );
 
   return (
-    <div className="w-[80%] mx-auto">{renderBodyContent(activeContentId)}</div>
+    <div className="w-screen h-screen">
+      <div className="w-[80%] mx-auto h-full flex flex-col justify-center ">
+        {renderBodyContent(activeContentId)}
+      </div>
+    </div>
   );
 }

@@ -1,9 +1,16 @@
 import React from "react";
 import { FaLink } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../../variants";
 
 export default function Certifications() {
   return (
-    <div className="text-gray-400">
+    <motion.div
+      variants={fadeIn("left", 0.2)}
+      initial="hidden"
+      animate="show"
+      className="text-gray-400"
+    >
       <div>
         <h1 className="text-xl">
           Professional Front end Developer - Cybersoft Academy
@@ -18,6 +25,6 @@ export default function Certifications() {
           </span>
         </h1>
       </div>
-    </div>
+    </motion.div>
   );
 }
