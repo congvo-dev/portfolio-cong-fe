@@ -4,7 +4,6 @@ import { useAppSelector } from "@/app/store/hooks";
 import Hi from "./Hi/Hi";
 import AboutMe from "./AboutMe/AboutMe";
 import MyProjects from "./Projects/MyProjects";
-import { div } from "framer-motion/client";
 
 const components: Record<string, JSX.Element> = {
   Hi: <Hi />,

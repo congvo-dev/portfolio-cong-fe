@@ -39,9 +39,9 @@ const HiContent: React.FC = () => {
       animate="show"
       className="text-center w-[50%]"
     >
-      I'm deeply passionate about coding, constantly striving to improve, and
+      {`I'm deeply passionate about coding, constantly striving to improve, and
       adept at creative problem-solving. Every day is a new opportunity to
-      enhance my programming skills and create innovative solutions.
+      enhance my programming skills and create innovative solutions.`}
     </motion.p>
   );
 };
