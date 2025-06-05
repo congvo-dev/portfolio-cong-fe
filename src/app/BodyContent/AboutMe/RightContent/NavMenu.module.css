@@ -1,0 +1,23 @@
+.navMenuItem::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  height: 2px;
+  width: 25%;
+  background-color: red;
+}
+
+.active {
+  color: red;
+}
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: red;
+  transition-duration: 500ms;
+}

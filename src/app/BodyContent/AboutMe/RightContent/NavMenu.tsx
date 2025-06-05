@@ -1,4 +1,5 @@
 import React from "react";
+import navStyles from "./NavMenu.module.css";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../variants";
 type NavMenuProps = {
@@ -22,7 +23,9 @@ export default function NavMenu({ activeItem, onItemClick }: NavMenuProps) {
     return navItemArr.map((item, index) => (
       <button
         key={index}
-        className={`${activeItem === item.id ? "active" : ""} cursor-pointer`}
+        className={`${activeItem === item.id ? navStyles.active : ""} ${
+          navStyles.navMenuItem
+        } cursor-pointer relative`}
         onClick={() => onItemClick(item.id)}
       >
         {item.label}

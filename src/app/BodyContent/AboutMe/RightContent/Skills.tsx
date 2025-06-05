@@ -12,6 +12,53 @@ import {
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../variants";
+
+const skillsData = {
+  fe: [
+    {
+      icon: <SiHtml5 />,
+      title: "HTML5",
+    },
+    {
+      icon: <SiCss3 />,
+      title: "CSS3",
+    },
+    {
+      icon: <SiJavascript />,
+      title: "Javascript",
+    },
+    {
+      icon: <SiTypescript />,
+      title: "Typescript",
+    },
+    {
+      icon: <FaReact />,
+      title: "React",
+    },
+    {
+      icon: <SiRedux />,
+      title: "Redux",
+    },
+    {
+      icon: <SiTailwindcss />,
+      title: "Tailwind",
+    },
+    {
+      icon: <SiBootstrap />,
+      title: "Bootstrap",
+    },
+  ],
+  tool: [
+    {
+      icon: <SiGithub />,
+      title: "Github",
+    },
+    {
+      icon: <FaGitAlt />,
+      title: "Git",
+    },
+  ],
+};
 export default function Skills() {
   return (
     <motion.div
@@ -22,22 +69,44 @@ export default function Skills() {
     >
       <div>
         <h1 className="text-2xl mb-5 text-gray-400">Front-End Development</h1>
-        <div className="flex text-4xl gap-5">
-          <SiHtml5 />
+        <div className="flex  gap-5 ">
+          {skillsData.fe.map((skill) => {
+            return (
+              <div className="group relative flex flex-col justify-center items-center">
+                {/* icon */}
+                <div className="text-5xl">{skill.icon}</div>
+                {/* tooltip */}
+                <div className="absolute top-13 px-1 rounded-sm text-sm text-black bg-white text-center opacity-0 group-hover:opacity-100 duration-300">
+                  {skill.title}
+                </div>
+              </div>
+            );
+          })}
+          {/* <SiHtml5 />
           <SiCss3 />
           <SiJavascript />
           <SiTypescript />
           <FaReact />
           <SiRedux />
           <SiTailwindcss />
-          <SiBootstrap />
+          <SiBootstrap /> */}
         </div>
       </div>
       <div>
         <h1 className="text-2xl mb-5 text-gray-400">Tools</h1>
-        <div className="flex text-4xl gap-3">
-          <SiGithub />
-          <FaGitAlt />
+        <div className="flex gap-5">
+          {skillsData.tool.map((skill) => {
+            return (
+              <div className="group relative flex flex-col justify-center items-center">
+                {/* icon */}
+                <div className="text-5xl">{skill.icon}</div>
+                {/* tooltip */}
+                <div className="absolute top-13 px-1 rounded-sm text-sm text-black bg-white text-center opacity-0 group-hover:opacity-100 duration-300">
+                  {skill.title}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </motion.div>

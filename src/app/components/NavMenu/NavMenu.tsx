@@ -34,7 +34,7 @@ export default function NavMenu() {
       return (
         <button
           key={index}
-          className={`navMenu-item  ${
+          className={`navMenu-item relative  ${
             activeContentId === item.id ? "active" : ""
           }`}
           onClick={() => dispatch(setActiveContentId(item.id))}

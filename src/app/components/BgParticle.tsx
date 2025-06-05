@@ -93,7 +93,7 @@ export default function BgParticle() {
           density: {
             enable: true,
           },
-          value: 60,
+          value: 40,
         },
         opacity: {
           value: 0.7,

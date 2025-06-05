@@ -28,13 +28,13 @@ const ExperienceStats: React.FC<ExperienceStatsProps> = ({ stats }) => {
 
 const experienceStats: ExperienceStat[] = [
   { value: "1", label: "YEARS OF\nEXPERIENCE" },
-  { value: "1", label: "YEARS OF<\n>EXPERIENCE" },
-  { value: "1", label: "YEARS OF\nEXPERIENCE" },
+  // { value: "1", label: "YEARS OF<\n>EXPERIENCE" },
+  // { value: "1", label: "YEARS OF\nEXPERIENCE" },
 ];
 
 export default function LeftContent() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 max-w-[45%]">
       <motion.h1
         variants={fadeIn("down", 0.1)}
         initial="hidden"

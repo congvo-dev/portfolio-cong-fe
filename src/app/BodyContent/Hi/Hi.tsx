@@ -48,7 +48,7 @@ const HiContent: React.FC = () => {
 
 export default function Hi() {
   return (
-    <div className="text-white space-y-5 flex flex-col items-center justify-center">
+    <div className="text-white space-y-10 flex flex-col items-center justify-center">
       <HiTitle />
       <JobTitle />
       <HiContent />
