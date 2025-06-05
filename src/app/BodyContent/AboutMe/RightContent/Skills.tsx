@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import { FaGitAlt, FaReact } from "react-icons/fa";
 import {
   SiBootstrap,
@@ -12,8 +12,13 @@ import {
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../variants";
+import { ReactNode } from "react";
 
-const skillsData = {
+interface TSkillItem {
+  icon: ReactNode;
+  title: string;
+}
+const skillsData: Record<string, TSkillItem[]> = {
   fe: [
     {
       icon: <SiHtml5 />,
@@ -59,6 +64,23 @@ const skillsData = {
     },
   ],
 };
+const renderSkillList = (skill: string) => {
+  return skillsData[skill].map((item: TSkillItem) => {
+    return (
+      <div
+        key={item.title}
+        className="group relative flex flex-col justify-center items-center"
+      >
+        {/* icon */}
+        <div className="text-5xl">{item.icon}</div>
+        {/* tooltip */}
+        <div className="absolute top-12 px-1 rounded-sm text-sm text-black bg-white text-center opacity-0 group-hover:opacity-100 duration-300">
+          {item.title}
+        </div>
+      </div>
+    );
+  });
+};
 export default function Skills() {
   return (
     <motion.div
@@ -69,45 +91,11 @@ export default function Skills() {
     >
       <div>
         <h1 className="text-2xl mb-5 text-gray-400">Front-End Development</h1>
-        <div className="flex  gap-5 ">
-          {skillsData.fe.map((skill) => {
-            return (
-              <div className="group relative flex flex-col justify-center items-center">
-                {/* icon */}
-                <div className="text-5xl">{skill.icon}</div>
-                {/* tooltip */}
-                <div className="absolute top-13 px-1 rounded-sm text-sm text-black bg-white text-center opacity-0 group-hover:opacity-100 duration-300">
-                  {skill.title}
-                </div>
-              </div>
-            );
-          })}
-          {/* <SiHtml5 />
-          <SiCss3 />
-          <SiJavascript />
-          <SiTypescript />
-          <FaReact />
-          <SiRedux />
-          <SiTailwindcss />
-          <SiBootstrap /> */}
-        </div>
+        <div className="flex  gap-5 ">{renderSkillList("fe")}</div>
       </div>
       <div>
         <h1 className="text-2xl mb-5 text-gray-400">Tools</h1>
-        <div className="flex gap-5">
-          {skillsData.tool.map((skill) => {
-            return (
-              <div className="group relative flex flex-col justify-center items-center">
-                {/* icon */}
-                <div className="text-5xl">{skill.icon}</div>
-                {/* tooltip */}
-                <div className="absolute top-13 px-1 rounded-sm text-sm text-black bg-white text-center opacity-0 group-hover:opacity-100 duration-300">
-                  {skill.title}
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <div className="flex gap-5">{renderSkillList("tool")}</div>
       </div>
     </motion.div>
   );

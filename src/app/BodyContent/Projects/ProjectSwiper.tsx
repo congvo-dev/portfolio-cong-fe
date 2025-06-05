@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Pagination, Autoplay, Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import { useRouter } from "next/navigation";
@@ -66,11 +66,8 @@ export default function ProjectSwiper() {
           <div className="grid grid-cols-2 gap-3">
             {slide.images.map((image, index) => {
               return (
-                <Zoom>
-                  <div
-                    key={index}
-                    className="flex flex-col item-center justify-center rounded-lg overflow-hidden portfolio__item group relative h-[280px]"
-                  >
+                <Zoom key={index}>
+                  <div className="flex flex-col item-center justify-center rounded-lg overflow-hidden portfolio__item group relative h-[280px]">
                     <img
                       src={image.path}
                       alt=""
@@ -78,8 +75,7 @@ export default function ProjectSwiper() {
                       width={500}
                       className="object-cover w-full h-full"
                     />
-                    {/* overlay */}
-                    {/* <div className="overlay"></div>
+
                     {/* title */}
                     <div className="absolute opacity-0 group-hover:opacity-100  text-red-500 duration-300 text-center w-full text-3xl text-bold">
                       <p>{image.title}</p>
@@ -111,7 +107,7 @@ export default function ProjectSwiper() {
       // }}
       navigation
       autoHeight={true}
-      modules={[Pagination, Autoplay, Navigation]}
+      modules={[Autoplay, Navigation]}
       // className="h-[280px] sm:h-[480px]"
     >
       {renderSwiperSlides()}
