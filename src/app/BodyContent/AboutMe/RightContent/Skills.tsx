@@ -1,4 +1,3 @@
-"use client";
 import { FaGitAlt, FaReact } from "react-icons/fa";
 import {
   SiBootstrap,

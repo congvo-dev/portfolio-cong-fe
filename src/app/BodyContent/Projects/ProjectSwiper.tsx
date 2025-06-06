@@ -15,7 +15,7 @@ const projectSlides = {
       images: [
         {
           title: "Home",
-          path: "/./airpnp/airbnb.png",
+          path: "/./airpnp/airpnp.png",
         },
         {
           title: "Room list",
@@ -101,11 +101,8 @@ export default function ProjectSwiper() {
   };
   return (
     <Swiper
-      // spaceBetween={10}
-      // pagination={{
-      //   clickable: true,
-      // }}
       navigation
+      autoplay
       autoHeight={true}
       modules={[Autoplay, Navigation]}
       // className="h-[280px] sm:h-[480px]"
