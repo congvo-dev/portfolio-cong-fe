@@ -41,7 +41,7 @@ const ContactTitle: React.FC = () => {
       animate="show"
       className="text-5xl"
     >
-      Let's <span className="text-red-500">connect</span>
+      {`Let's`} <span className="text-red-500">connect</span>
     </motion.h2>
   );
 };
