@@ -4,11 +4,13 @@ import { useAppSelector } from "@/app/store/hooks";
 import Hi from "./Hi/Hi";
 import AboutMe from "./AboutMe/AboutMe";
 import MyProjects from "./Projects/MyProjects";
+import Contact from "./Contact/Contact";
 
 const components: Record<string, JSX.Element> = {
   Hi: <Hi />,
   AboutMe: <AboutMe />,
   MyProjects: <MyProjects />,
+  Contact: <Contact />,
 };
 
 const renderBodyContent = (activeContentId: string) =>

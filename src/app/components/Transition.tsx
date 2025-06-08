@@ -24,7 +24,7 @@ const Transition = ({ children }: { children: React.ReactNode }) => {
       <motion.div key={pathname} className="h-full">
         {/* 1 */}
         <motion.div
-          className="fixed top-0 bottom-0 right-full w-screen h-screen z-30 bg-[#2e2257]"
+          className="fixed top-0 bottom-0 right-full w-screen h-screen z-30 bg-[#f0eff4]"
           variants={transitionVariants}
           initial="initial"
           animate="animate"
@@ -33,7 +33,7 @@ const Transition = ({ children }: { children: React.ReactNode }) => {
         ></motion.div>
         {/* 2 */}
         <motion.div
-          className="fixed top-0 bottom-0 right-full w-screen h-screen z-20 bg-[#3b2d71]"
+          className="fixed top-0 bottom-0 right-full w-screen h-screen z-20 bg-[#c0c0c0]"
           variants={transitionVariants}
           initial="initial"
           animate="animate"
@@ -42,7 +42,7 @@ const Transition = ({ children }: { children: React.ReactNode }) => {
         ></motion.div>
         {/* 3 */}
         <motion.div
-          className="fixed top-0 bottom-0 right-full w-screen h-screen z-10 bg-[#4b3792]"
+          className="fixed top-0 bottom-0 right-full w-screen h-screen z-10 bg-[#565656]"
           variants={transitionVariants}
           initial="initial"
           animate="animate"

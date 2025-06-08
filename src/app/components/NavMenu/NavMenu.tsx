@@ -19,7 +19,7 @@ const navItemArr = [
     icon: <FaClipboardList className="text-2xl mx-auto" />,
   },
   {
-    id: "4",
+    id: "Contact",
     icon: <FaEnvelope className="text-2xl mx-auto" />,
   },
 ];
