@@ -87,7 +87,7 @@ export default function ProjectSwiper() {
           </div>
           <div className="mx-auto w-full text-center mt-2">
             <button
-              className="bg-red-500 text-white py-2 px-3 rounded-lg cursor-pointer"
+              className="bg-red-500 hover:bg-red-400 duration-300 text-white py-2 px-3 rounded-lg cursor-pointer"
               onClick={() => {
                 router.push(`/project/${slide.titleProject}`);
               }}
@@ -102,10 +102,12 @@ export default function ProjectSwiper() {
   return (
     <Swiper
       navigation
-      autoplay
+      autoplay={{
+        pauseOnMouseEnter: true,
+      }}
       autoHeight={true}
       modules={[Autoplay, Navigation]}
-      // className="h-[280px] sm:h-[480px]"
+      className="h-[280px] sm:h-[480px]"
     >
       {renderSwiperSlides()}
     </Swiper>
