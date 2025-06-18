@@ -45,7 +45,7 @@ export default function NavMenu() {
     });
   };
   return (
-    <div className="flex flex-col items-center justify-center fixed bottom-[2%] w-full lg:right-[2%] lg:top-0 lg:h-screen  lg:w-16 z-10">
+    <div className="flex flex-col items-center justify-center fixed bottom-0 w-full lg:right-[2%] lg:top-0 lg:h-screen  lg:w-16 z-10">
       <div className="flex lg:flex-col items-center justify-center gap-10 bg-white/10 backdrop-blur-md rounded-full py-5 px-3">
         {renderNavMenu()}
       </div>

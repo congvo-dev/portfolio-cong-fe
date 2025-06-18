@@ -10,20 +10,20 @@ export default function MyProjects() {
         variants={fadeIn("down", 0.2)}
         initial="hidden"
         animate="show"
-        className="lg:w-[30%] text-white flex flex-col justify-center items-center text-center mb-10 mx-auto gap-3"
+        className="lg:max-w-[25%] text-white flex flex-col justify-center items-center text-center mb-10 mx-auto gap-3"
       >
-        <h1 className="text-5xl text-red-500">My work</h1>
+        <h1 className="text-5xl text-red-500">My projects</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
           pariatur est ducimus dolore corporis assumenda.
         </p>
       </motion.div>
-      {/* content */}
+      {/* swiper */}
       <motion.div
         variants={fadeIn("down", 0.2)}
         initial="hidden"
         animate="show"
-        className="w-full lg:w-[70%]"
+        className="w-full lg:w-[75%]"
       >
         <ProjectSwiper />
       </motion.div>

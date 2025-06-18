@@ -34,7 +34,8 @@ const experienceStats: ExperienceStat[] = [
 
 export default function LeftContent() {
   return (
-    <div className="space-y-10 max-w-[45%]">
+    <div className="space-y-10 text-center lg:text-left w-full lg:max-w-[40%]">
+      {/* about me */}
       <motion.h1
         variants={fadeIn("down", 0.1)}
         initial="hidden"
@@ -43,6 +44,7 @@ export default function LeftContent() {
       >
         About <span className="text-red-500">me</span>
       </motion.h1>
+      {/* content */}
       <motion.p
         variants={fadeIn("down", 0.2)}
         initial="hidden"
@@ -54,12 +56,12 @@ export default function LeftContent() {
         manageable steps, approaching each difficulty as an opportunity for
         personal growth and advancement.
       </motion.p>
-
+      {/* exp */}
       <motion.div
         variants={fadeIn("down", 0.3)}
         initial="hidden"
         animate="show"
-        className="flex divide-x-2"
+        className=""
       >
         <ExperienceStats stats={experienceStats} />
       </motion.div>

@@ -22,7 +22,7 @@ export default function BodyContent() {
   );
 
   return (
-    <div className="w-screen h-screen">
+    <div className="w-screen h-screen pt-10 pb-20">
       <div className="w-[80%] mx-auto h-full flex flex-col justify-center ">
         {renderBodyContent(activeContentId)}
       </div>

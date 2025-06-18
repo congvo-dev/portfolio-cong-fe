@@ -4,8 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Autoplay, Navigation } from "swiper/modules";
-import Zoom from "react-medium-image-zoom";
+import { Autoplay, Pagination } from "swiper/modules";
 import "react-medium-image-zoom/dist/styles.css";
 import { useRouter } from "next/navigation";
 
@@ -63,25 +62,24 @@ export default function ProjectSwiper() {
     return projectSlides.slides.map((slide, index) => {
       return (
         <SwiperSlide key={index}>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 grid-rows-2 gap-3 md:gap-5">
             {slide.images.map((image, index) => {
               return (
-                <Zoom key={index}>
-                  <div className="flex flex-col item-center justify-center rounded-lg overflow-hidden portfolio__item group relative h-[280px]">
-                    <img
-                      src={image.path}
-                      alt=""
-                      height={300}
-                      width={500}
-                      className="object-cover w-full h-full"
-                    />
+                <div
+                  key={index}
+                  className="h-[100] md:h-[200] flex flex-col justify-center rounded-lg overflow-hidden portfolio__item group relative cursor-pointer "
+                >
+                  <img
+                    src={image.path}
+                    alt=""
+                    className="h-full w-full object-cover"
+                  />
 
-                    {/* title */}
-                    <div className="absolute opacity-0 group-hover:opacity-100  text-red-500 duration-300 text-center w-full text-3xl text-bold">
-                      <p>{image.title}</p>
-                    </div>
+                  {/* title */}
+                  <div className="absolute opacity-0 bg-black bg-opacity-50 group-hover:opacity-100  text-red-500 duration-300 text-center w-full text-3xl text-bold">
+                    <p>{image.title}</p>
                   </div>
-                </Zoom>
+                </div>
               );
             })}
           </div>
@@ -101,13 +99,15 @@ export default function ProjectSwiper() {
   };
   return (
     <Swiper
-      navigation
-      autoplay={{
-        pauseOnMouseEnter: true,
+      spaceBetween={10}
+      // autoplay={{
+      //   pauseOnMouseEnter: true,
+      // }}
+      pagination={{
+        clickable: true,
       }}
-      autoHeight={true}
-      modules={[Autoplay, Navigation]}
-      className="h-[280px] sm:h-[480px]"
+      autoHeight={false}
+      modules={[Autoplay, Pagination]}
     >
       {renderSwiperSlides()}
     </Swiper>

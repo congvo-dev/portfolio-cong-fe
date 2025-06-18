@@ -4,7 +4,7 @@ import LeftContent from "./LeftContent/LeftContent";
 
 export default function AboutMe() {
   return (
-    <div className="text-white lg:flex space-y-10 ">
+    <div className="text-white lg:flex space-y-10 gap-10">
       <LeftContent />
       <RightContent />
     </div>
